@@ -10,9 +10,9 @@ Within Docker:
 
 Within Kubernetes
 
-    $ kubectl run --rm -it --image mumoshu/kubectl:v1.3.3 kubesh -- sh
+    $ kubectl run --rm -it --image mumoshu/kubectl:1.3.3 kubesh -- sh
     # Or dive into an interactive shell
-    $ kubectl run --rm -it --image mumoshu/kubectl:v1.3.3 kubesh -- sh
+    $ kubectl run --rm -it --image mumoshu/kubectl:1.3.3 kubesh -- sh
 
 ## Why use it
 

@@ -1,4 +1,4 @@
-KUBECTL_VERSION ?= v1.2.2
+KUBECTL_VERSION ?= 1.2.2
 VERSION ?= 0.9.0
 REPOSITORY ?= mumoshu/kubectl
 TAG ?= $(KUBECTL_VERSION)-$(VERSION)
@@ -8,12 +8,12 @@ BUILD_ROOT ?= build/$(TAG)
 DOCKERFILE ?= $(BUILD_ROOT)/Dockerfile
 
 cross-build:
-	for v in v1.2.{5..6} v1.3.{0..3}; do\
+	for v in 1.2.{5..6} 1.3.{0..3}; do\
 	  KUBECTL_VERSION=$$v sh -c 'echo $$KUBECTL_VERSION';\
 	  KUBECTL_VERSION=$$v make build ;\
 	done
 cross-push:
-	for v in v1.2.{5..6} v1.3.{0..3}; do\
+	for v in 1.2.{5..6} 1.3.{0..3}; do\
 	  KUBECTL_VERSION=$$v sh -c 'echo $$KUBECTL_VERSION';\
 	  KUBECTL_VERSION=$$v make publish ;\
 	done
