@@ -4,7 +4,15 @@ Dockerized `kubectl` CLI tool for [Kubernetes](http://kubernetes.io/). Built on 
 
 ## Usage
 
+Within Docker:
+
     $ docker run --rm --net=host wernight/kubectl kubectl --help
+
+Within Kubernetes
+
+    $ kubectl run --rm -it --image mumoshu/kubectl:v1.3.3 kubesh -- sh
+    # Or dive into an interactive shell
+    $ kubectl run --rm -it --image mumoshu/kubectl:v1.3.3 kubesh -- sh
 
 ## Why use it
 
